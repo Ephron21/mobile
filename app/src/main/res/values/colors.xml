@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Theme Colors -->
+    <color name="blue_primary">#003580</color>
+    <color name="blue_dark">#002347</color>
+    <color name="yellow_accent">#FFC107</color>
+    <color name="yellow_dark">#FFA000</color>
+
+    <!-- Standard Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

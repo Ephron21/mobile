@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Booking.com</string>
+    <string name="app_logo">Application Logo</string>
+
+    <!-- Main Screen -->
+    <string name="hotels_tonight_nearby">Hotels for tonight nearby</string>
+    <string name="search_hotels">Search Hotels</string>
+    <string name="around_current_location">Around current location</string>
+
+    <!-- Check-in/Check-out -->
+    <string name="check_in_date">Check-in Date</string>
+    <string name="default_check_in_date">Thu 25 Apr 2013</string>
+    <string name="default_check_out_date">Check-out Date: Fri 26 Apr 2013</string>
+
+    <!-- Number of Nights -->
+    <string name="number_of_nights">Number of Nights</string>
+    <string name="default_nights">1</string>
+    <string name="minus">−</string>
+    <string name="plus">+</string>
+    <string name="decrease_button_desc">Decrease nights</string>
+    <string name="increase_button_desc">Increase nights</string>
+
+    <!-- Buttons -->
+    <string name="search">Search</string>
+    <string name="details">Details</string>
+    <string name="book_now">Book Now</string>
+
+    <!-- Content Descriptions -->
+    <string name="compass_icon">Compass icon</string>
+    <string name="arrow_icon">Navigate forward</string>
+    <string name="calendar_icon">Calendar icon</string>
+    <string name="location_icon">Location icon</string>
+    <string name="favorite_icon">Favorite</string>
+    <string name="navigate">Navigate</string>
+    <string name="hotel_image">Hotel Image</string>
+
+    <!-- Singapore Section -->
+    <string name="singapore">Singapore</string>
+    <string name="hotels_count">285 hotels</string>
+    <string name="singapore_cityscape">Singapore cityscape</string>
+
+    <!-- Hotel List Placeholders -->
+    <string name="hotel_name_placeholder">Hotel Name</string>
+    <string name="location_placeholder">Location</string>
+    <string name="category_placeholder">Category</string>
+    <string name="price_placeholder">FRW 100,000/night</string>
+    <string name="hotel_description">Enjoy luxury accommodations with world-class amenities.</string>
+
+    <!-- Hotel Details -->
+    <string name="about_hotel">About This Hotel</string>
+    <string name="description_placeholder">Hotel description</string>
+    <string name="price_per_night">Price per night</string>
+    <string name="excellent">Excellent</string>
+
+    <!-- Menu Items -->
+
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="sort_price_low">Price: Low to High</string>
+    <string name="sort_price_high">Price: High to Low</string>
+    <string name="sort_rating">Rating: Highest First</string>
+
+    <!-- Categories -->
+    <string name="all_categories">All</string>
+    <string name="luxury">Luxury</string>
+    <string name="business">Business</string>
+    <string name="heritage">Heritage</string>
+    <string name="boutique">Boutique</string>
+    <string name="resort">Resort</string>
+    <string name="safari_luxury">Safari Luxury</string>
+    <string name="budget">Budget</string>
+    <string name="mid_range">Mid-Range</string>
+    <string name="nature_lodge">Nature Lodge</string>
+
+    <!-- Toast Messages -->
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="sorted_by_price">Sorted by price</string>
+    <string name="sorted_by_rating">Sorted by rating (Highest first)</string>
+    <string name="booking_confirmed">Booking confirmed for %s</string>
+    <string name="filtered_by">Filtered by: %s</string>
+
+    <!-- Dialog Messages -->
+    <string name="confirm_booking_title">confirm_booking_title</string>
+    <string name="confirm_booking_message">confirm_booking_message</string>
+    <string name="available_hotels_title">available_hotels_title</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="booking_message">Book %1$s for %2$s/night?</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="filter_by_category">Filter by Category</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search hotels...</string>
+    <string name="no_results">No hotels found</string>
+
+    <!-- Rwanda Specific -->
+    <string name="rwanda">Rwanda</string>
+    <string name="kigali">Kigali</string>
+    <string name="volcanoes_national_park">Volcanoes National Park</string>
+    <string name="lake_kivu">Lake Kivu</string>
+    <string name="nyungwe">Nyungwe</string>
+    <string name="musanze">Musanze</string>
+    <string name="rubavu">Rubavu</string>
+</resources>

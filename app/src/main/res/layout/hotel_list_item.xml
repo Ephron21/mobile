@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hotel Image -->
+        <ImageView
+            android:id="@+id/hotelImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/hotel_image"
+            tools:src="@drawable/hotel_placeholder"/>
+
+        <!-- Favorite Icon Overlay -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-180dp">
+
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="12dp"
+                android:padding="4dp"
+                android:src="@android:drawable/star_big_off"
+                android:contentDescription="@string/favorite_icon"
+                android:background="@android:color/white"
+                android:elevation="2dp"
+                app:tint="#FFD700"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header: Name -->
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hotel_name_placeholder"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#003580"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <!-- Category Badge -->
+            <TextView
+                android:id="@+id/hotelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category_placeholder"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:background="#0099FF"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="6dp"
+                android:textAllCaps="true"/>
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/hotelLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_placeholder"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@android:drawable/ic_dialog_map"
+                android:drawablePadding="4dp"
+                app:drawableTint="#666666"/>
+
+            <!-- Rating -->
+            <RatingBar
+                android:id="@+id/hotelRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:rating="4.5"
+                android:isIndicator="true"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/hotelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_placeholder"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FF6B00"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:baselineAligned="false">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/details"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#0099FF"
+                        app:cornerRadius="4dp"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnQuickBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_now"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#00C851"
+                        app:cornerRadius="4dp"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

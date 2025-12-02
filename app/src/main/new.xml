@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical" android:gravity="center"
+    android:padding="16dp" tools:context=".MainActivity">
+
+    <!-- This is a simple layout to confirm the activity can launch. -->
+    <!-- It avoids all complex views and potential errors. -->
+
+    <TextView android:id="@+id/welcome_text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Activity Launched Successfully!"
+        android:textSize="20sp" android:layout_marginBottom="24dp" />
+
+    <Button android:id="@+id/searchButton" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Continue to Hotel List" />
+
+    <!--
+        NOTE: The other views like checkInDate, checkOutDate, nightsCount, etc.,
+        are intentionally left out for this test. The Java code we implemented has
+        a null-check that will catch this and show a Toast message,
+        but the app will NOT crash.
+    -->
+
+</LinearLayout>

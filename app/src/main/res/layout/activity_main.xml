@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar with the corrected logo implementation -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#003580"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="@drawable/ic_menu"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- This LinearLayout contains two TextViews to create the two-color logo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <!-- SYNTAX ERROR FIXED: The tag is now correctly formed as <TextView> -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=".com"
+                android:textColor="#00A2FF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Hotels for tonight nearby -->
+            <LinearLayout
+                android:id="@+id/tonightHotelsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEFF1"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_compass"
+                    android:contentDescription="@string/compass_icon"
+                    app:tint="#003580"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hotels_tonight_nearby"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#003580" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_forward_blue"
+                    android:contentDescription="@string/arrow_icon" />
+            </LinearLayout>
+
+            <!-- Yellow Search Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFC107"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_hotels"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#003580"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/location_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/around_current_location"
+                    android:textColor="#808080"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"
+                    app:drawableEndCompat="@drawable/clear_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_in_date"
+                    android:textSize="14sp"
+                    android:textColor="#003580"
+                    android:layout_marginBottom="4dp" />
+
+                <LinearLayout
+                    android:id="@+id/checkInLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="12dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/checkInDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/default_check_in_date"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calendar_grey"
+                        android:contentDescription="@string/calendar_icon" />
+                </LinearLayout>
+
+                <!-- Number of Nights -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/number_of_nights"
+                        android:textColor="#003580"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/decreaseNights"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="@string/minus"
+                        android:textSize="20sp"
+                        app:backgroundTint="#0096FF"
+                        app:cornerRadius="8dp"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp" />
+
+                    <TextView
+                        android:id="@+id/nightsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:text="@string/default_nights"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/increaseNights"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="@string/plus"
+                        android:textSize="20sp"
+                        app:backgroundTint="#0096FF"
+                        app:cornerRadius="8dp"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/checkOutDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_check_out_date"
+                    android:textSize="14sp"
+                    android:textColor="#003580"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/searchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/search"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#0096FF"
+                    app:cornerRadius="4dp"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <!-- Singapore Hotels Section -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="234dp"
+                android:background="#DCDCDC"
+                android:minHeight="200dp"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/singapore"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hotels_count"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/navigate"
+                    android:src="@drawable/ic_arrow_forward"
+                    app:tint="#888888" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

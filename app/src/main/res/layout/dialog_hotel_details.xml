@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hotel Image -->
+        <ImageView
+            android:id="@+id/detailHotelImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/hotel_image"
+            tools:src="@drawable/hotel_placeholder"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Hotel Name -->
+            <TextView
+                android:id="@+id/detailHotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hotel_name_placeholder"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#003580"
+                tools:text="Kigali Serena Hotel"/>
+
+            <!-- Category -->
+            <TextView
+                android:id="@+id/detailHotelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category_placeholder"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:background="#0099FF"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="8dp"
+                android:textAllCaps="true"
+                tools:text="Category: Luxury"/>
+
+            <!-- Rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp">
+
+                <RatingBar
+                    android:id="@+id/detailHotelRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:rating="4.8"
+                    android:isIndicator="true"
+                    style="?android:attr/ratingBarStyleSmall"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/excellent"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/detailHotelLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_placeholder"
+                android:textSize="15sp"
+                android:textColor="#666666"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@android:drawable/ic_dialog_map"
+                android:drawablePadding="6dp"
+                app:drawableTint="#666666"
+                tools:text="Location: Kigali"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Description Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_hotel"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#003580"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/detailHotelDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_placeholder"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="4dp"
+                tools:text="Five-star luxury hotel with stunning city views, world-class dining, spa facilities, and impeccable service."/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Price -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/price_per_night"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/detailHotelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_placeholder"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FF6B00"
+                android:layout_marginBottom="20dp"
+                tools:text="FRW 312,500/night"/>
+
+            <!-- Book Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBookNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/book_now"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                app:backgroundTint="#00C851"
+                app:cornerRadius="6dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
