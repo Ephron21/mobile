@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="#ECEFF1"
+                android:background="#E8E0E0"
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="16dp"
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/check_in_date"
                     android:textSize="14sp"
-                    android:textColor="#003580"
+                    android:textColor="#0E6CF0"
                     android:layout_marginBottom="4dp" />
 
                 <LinearLayout
@@ -174,18 +174,26 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/number_of_nights"
-                        android:textColor="#003580"
+                        android:textColor="#0E6CF0"
                         android:textSize="16sp" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/decreaseNights"
-                        style="@style/Widget.Material3.Button.IconButton.Filled"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:text="@string/minus"
-                        android:textSize="20sp"
-                        app:backgroundTint="#0096FF"
-                        app:cornerRadius="8dp"
+                        android:text="-"
+                        android:textSize="28sp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/minus_button_background"
+                        app:backgroundTint="@null"
+                        app:iconPadding="0dp"
+                        app:iconGravity="textStart"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
                         android:insetRight="0dp"
@@ -204,13 +212,21 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/increaseNights"
-                        style="@style/Widget.Material3.Button.IconButton.Filled"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:text="@string/plus"
-                        android:textSize="20sp"
-                        app:backgroundTint="#0096FF"
-                        app:cornerRadius="8dp"
+                        android:text="+"
+                        android:textSize="28sp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/plus_button_background"
+                        app:backgroundTint="@null"
+                        app:iconPadding="0dp"
+                        app:iconGravity="textStart"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
                         android:insetRight="0dp"
@@ -222,29 +238,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/default_check_out_date"
-                    android:textSize="14sp"
+                    android:textSize="26sp"
                     android:textColor="#003580"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
                     android:layout_marginBottom="16dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/searchButton"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
                     android:layout_height="56dp"
                     android:text="@string/search"
-                    android:textSize="20sp"
+                    android:textSize="26sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#0096FF"
-                    app:cornerRadius="4dp"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/search_button_background"
+                    app:backgroundTint="@null"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:layout_marginLeft="40dp"/>
             </LinearLayout>
 
             <!-- Singapore Hotels Section -->
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="234dp"
-                android:background="#DCDCDC"
-                android:minHeight="200dp"
-                android:padding="16dp">
+                android:layout_height="match_parent"
+                android:background="@drawable/kigai"
+                android:minHeight="24dp"
+                android:padding="24dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -255,26 +276,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/singapore"
-                        android:textColor="#000000"
-                        android:textSize="24sp"
+                        android:text="@string/rwanda1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="35sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hotels_count"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="end|center_vertical"
                     android:contentDescription="@string/navigate"
                     android:src="@drawable/ic_arrow_forward"
-                    app:tint="#888888" />
+                    app:tint="#FFFFFF" />
             </FrameLayout>
 
         </LinearLayout>

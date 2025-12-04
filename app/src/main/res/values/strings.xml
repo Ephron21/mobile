@@ -37,9 +37,9 @@
     <string name="hotel_image">Hotel Image</string>
 
     <!-- Singapore Section -->
-    <string name="singapore">Singapore</string>
+    <string name="rwanda1">Rwanda</string>
     <string name="hotels_count">285 hotels</string>
-    <string name="singapore_cityscape">Singapore cityscape</string>
+    <string name="rwanda_cityscape">Rwanda cityscape</string>
 
     <!-- Hotel List Placeholders -->
     <string name="hotel_name_placeholder">Hotel Name</string>
